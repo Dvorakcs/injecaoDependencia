@@ -8,8 +8,8 @@ namespace injecaoDependencia.models
 {
     internal class UsuarioModel
     {
-        public int id { get; set; }
-        public string nome { get; set; } = string.Empty;
+        public int? id { get; set; }
+        public string? nome { get; set; } = string.Empty;
 
         public UsuarioModel(int id, string nome)
         {

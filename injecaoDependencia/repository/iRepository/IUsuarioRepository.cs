@@ -9,7 +9,7 @@ namespace injecaoDependencia.repository.iRepository
 {
     internal interface IUsuarioRepository
     {
-        List<UsuarioModel> Getall();
+        object Getall();
         UsuarioModel Get(int id);
         void Add(UsuarioModel model);
     }

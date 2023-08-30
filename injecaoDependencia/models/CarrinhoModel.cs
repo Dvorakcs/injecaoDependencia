@@ -8,5 +8,7 @@ namespace injecaoDependencia.models
 {
     internal class CarrinhoModel
     {
+        public int id { get; set; }
+        public List<object> Itens { get; set; }
     }
 }

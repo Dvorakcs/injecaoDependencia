@@ -1,29 +1,21 @@
 ﻿using injecaoDependencia.models;
+using System.Runtime.CompilerServices;
 
 namespace injecaoDependencia.DbMemory.Db
 {
     internal class Dados<T>
     {
-        public List<object> Main = new List<object> {
-             new  {
-
-                        Usuario = new List<UsuarioModel>
-                        {
-                        new UsuarioModel(1,"teste"),
-                        new UsuarioModel(2,"teste2"),
-                        new UsuarioModel(3,"teste3"),
-                        new UsuarioModel(4,"teste4"),
-                        new UsuarioModel(5,"teste5"),
-                        new UsuarioModel(6,"teste6"),
-                         }
-             }
-
-        };
+        private readonly Main main = new Main();
+        public Dados()
+        {
+            
+        }
 
         public object GetModel(Type type)
         {
-            var Model = Main.FirstOrDefault(x => x.GetType() == type);
-            return Model;
+
+            var result = main.Where(type);
+            return result;
         }
 
     }

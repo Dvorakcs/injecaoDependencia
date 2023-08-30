@@ -1,4 +1,5 @@
-﻿using injecaoDependencia.models;
+﻿using injecaoDependencia.DbMemory;
+using injecaoDependencia.models;
 using injecaoDependencia.repository.iRepository;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ namespace injecaoDependencia.repository
 {
     internal class UsuarioRepository : IUsuarioRepository
     {
+        private readonly object usuario = new DbContextMemory();
         void IUsuarioRepository.Add(UsuarioModel model)
         {
             throw new NotImplementedException();
@@ -20,9 +22,9 @@ namespace injecaoDependencia.repository
             throw new NotImplementedException();
         }
 
-        List<UsuarioModel> IUsuarioRepository.Getall()
+        object IUsuarioRepository.Getall()
         {
-            throw new NotImplementedException();
+            return usuario;
         }
     }
 }

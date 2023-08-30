@@ -17,7 +17,10 @@ namespace injecaoDependencia.services
              UsuarioRepository = usuarioRepository;
         }
 
-
+        public object get()
+        {
+            return UsuarioRepository.Getall();
+        }
 
         public void add(UsuarioModel model)
         {

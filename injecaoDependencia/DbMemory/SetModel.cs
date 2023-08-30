@@ -11,13 +11,13 @@ namespace injecaoDependencia.DbMemory
     internal class SetModel<T>
     {
         private readonly Dados<T>  _Contexto = new Dados<T>();
-        public T Model { get; set; }
-        public object objReturn { get; set; }
+        private readonly T Obj;
+        public object Model { get; set; }
+        
 
-        public SetModel(T model) {
-
-            this.Model = model;
-            this.objReturn = _Contexto.GetModel(Model.GetType());
+        public SetModel(T setModel) {
+            Obj = setModel;
+            this.Model = _Contexto.GetModel(this.Obj.GetType());
         }
     }
 }
