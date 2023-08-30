@@ -8,10 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="models\" />
     <Folder Include="controller\" />
-    <Folder Include="DbMemory\" />
-    <Folder Include="services\" />
   </ItemGroup>
 
 </Project>
