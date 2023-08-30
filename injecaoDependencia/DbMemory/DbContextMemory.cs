@@ -9,7 +9,8 @@ namespace injecaoDependencia.DbMemory
 {
     internal class DbContextMemory
     {
-        public SetModel<UsuarioModel> usuarios = new SetModel<UsuarioModel>(new UsuarioModel(1,""));
+        public SetModel<UsuarioModel> usuarios = new SetModel<UsuarioModel>(new UsuarioModel());
+        public SetModel<CarrinhoModel> carrinhos = new SetModel<CarrinhoModel>(new CarrinhoModel());
         public DbContextMemory()
         {
             

@@ -11,7 +11,8 @@ namespace injecaoDependencia.repository
 {
     internal class UsuarioRepository : IUsuarioRepository
     {
-        private readonly object usuario = new DbContextMemory();
+        private readonly object usuario = new DbContextMemory().usuarios.Model;
+        private readonly object carrinho = new DbContextMemory().carrinhos.Model;
         void IUsuarioRepository.Add(UsuarioModel model)
         {
             throw new NotImplementedException();
@@ -24,6 +25,7 @@ namespace injecaoDependencia.repository
 
         object IUsuarioRepository.Getall()
         {
+            var Carrinho = carrinho;
             return usuario;
         }
     }

@@ -16,5 +16,10 @@ namespace injecaoDependencia.models
             this.id = id;
             this.nome = nome;
         }
+
+        public UsuarioModel()
+        {
+            
+        }
     }
 }

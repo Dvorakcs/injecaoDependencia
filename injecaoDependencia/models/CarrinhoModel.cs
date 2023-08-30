@@ -10,5 +10,11 @@ namespace injecaoDependencia.models
     {
         public int id { get; set; }
         public List<object> Itens { get; set; }
+
+
+        public CarrinhoModel()
+        {
+            Itens = new List<object>();
+        }
     }
 }
